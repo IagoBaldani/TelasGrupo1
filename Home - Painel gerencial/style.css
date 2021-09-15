@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #EBEBEB;
+}
+
+.header{
+    background-color: #090B2E;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-header{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disabled{
+    display: none !important; 
+}
+
+.btn-header img, .logo img{
+    height: 45px;
+}
+
+.home.btn-header{
+    background-color: #FFB700;
+}
+
+.rollback.btn-header{
+    background-color: #AB0045;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.area-btns{
+    width:85%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 20px;
+}
+
+.btn-container{
+    height: 240px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    transition: all linear 0.2s;
+}
+
+.btn-container:hover{
+    box-shadow: 0px 0px 20px #5a5a5a;
+}
+
+.icon-btn-container, .txt-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-btn-container img{
+    width: 50px;
+}
+
+.icon-btn-container{
+    height: 35%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.txt-btn-container{
+    height: 65%;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;  
+}
+
+.icon-btn-container.info, .icon-btn-container.processoSeletivo{
+    background-color: #AA0045;
+}
+.txt-btn-container.info, .txt-btn-container.processoSeletivo{
+    background: linear-gradient(45deg, #AB0045, #EC005F);
+}
+
+.icon-btn-container.acompanhamento{
+    background-color: #FFB600;
+}
+.txt-btn-container.acompanhamento{
+    background: linear-gradient(45deg, #C79007, #FFB600);
+}
+
+.icon-btn-container.relatorios{
+    background-color: #090B2E;
+}
+.txt-btn-container.relatorios{
+    background: linear-gradient(45deg, #090B2E, #1D2276);
+}
+
+.icon-btn-container.investimentos{
+    background-color: #00B6FF;
+}
+.txt-btn-container.investimentos{
+    background: linear-gradient(45deg, #0288BE, #00B6FF);
+}
+
+
+
