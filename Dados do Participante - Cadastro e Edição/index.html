@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informações Gerais - Gerencial</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src='main.js'></script>
+    </head>
+    <body>
+        <header>
+            <div class="header"> 
+                    <a href=""> <div class="home btn-header">
+                        <img src="imgs/home_white_24dp.svg">
+                    </div> </a> 
+
+                    <div class="logo"> 
+                        <img src="imgs/LOGO_SIS_2.png">
+                    </div>
+
+                    <a href="">
+                    <div class="rollback btn-header"> 
+                        <img src="imgs/arrow_back_white_24dp.svg">
+                    </div> </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ínicio do formulário -->
+            <div class="container-fluid">
+                <div class="row mt-5 justify-content-evenly">
+                    <div class="div-titulo col-xl-4">
+                        <h3 class="fw-bold titulo">Dados do participante:</h3>
+                    </div>
+                    <div class="col-xl-4"></div>
+                    <div class="col-xl-2"></div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="col-xl-4">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputName">Nome</label>
+                                <input class="form-control" placeholder="Miguel Felisberto Firmino" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputContato">Contato</label>
+                                <input class="form-control" id="inputContato" placeholder="(xx) xxxxx-xxxx" type="tel">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputContato">Fonte recrutamento</label>
+                                <input class="form-control" id="inputFonteRecrutamento" placeholder="Palestra via faculdade" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputNotaLogica">Nota na prova de lógica</label>
+                                <input class="form-control" id="inputNotaLogica" placeholder="10/10" type="number" min="0" max="10">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputDisc">DISC</label><br>
+                                <a href="www.google.com.br"><img src="icones/file_download_black_24dp.svg" alt="">disc.xls</a>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputInstEnsino">Instituição de Ensino</label>
+                                <input class="form-control" id="inputInstEnsino" placeholder="Fatec Ourinhos" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputCurso">Curso</label>
+                                <input class="form-control" id="inputCurso" placeholder="Análise e Desenvolvimento de Sistemas" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputDisc">TCE</label><br>
+                                <a href="www.google.com.br"><img src="icones/file_download_black_24dp.svg" alt="">tce.xls</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-4">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputTermGraduacao">Término da graduação</label>
+                                <input class="form-control" id="inputTermGraduacao" placeholder="20/12/2021" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputCargo">Cargo</label>
+                                <select class="form-select" id="inputCargo" placeholder="Estagiário">
+                                    <option value="1">Estagiário</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputTurma">Programa de Formação - Turma</label>
+                                <input class="form-control"  id="inputTurma" placeholder="Java - Turma I 2021" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputCargo">Coordenador Técnico</label>
+                                <input class="form-control" id="inputCargo" placeholder="Kaique Lopes" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputIniPrograma">Início do programa</label>
+                                <input class="form-control" id="inputIniPrograma" placeholder="20/07/2021" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputIniPrograma">Término do programa</label>
+                                <input class="form-control" id="inputIniPrograma" placeholder="12/12/2021" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputIniPrograma">Observação</label>
+                                <textarea name="" class="form-control" placeholder="Mensagem..." cols="20" rows="10" style="resize:none; height:200px;"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-2">
+                        <form>
+                            <div class=" text-center text-md-left">
+                                <img src="imgs/perfil.svg" class="rounded-circle" alt="" width="150px">
+                            </div>
+                            <button type="button" class="btn submit form-control mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                EDITAR
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="col-xl-4 ">
+                        <button type="button" class="btn submit form-control" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            DESATIVAR PARTICIPANTE
+                        </button>
+                        <!--<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">DESATIVAR PARTICIPANTE</button>-->
+                    </div>
+                    <div class="col-xl-4"></div>
+                    <div class="col-xl-2"></div>
+                </div>
+            </div>
+            <!-- fim do formulário -->
+        </main>
+
+        
+        <!-- modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-xl modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-between">
+                    <div>
+                        <h1 class="modal-title form-label fw-bold mb-0 titulo"> Deseja confirmar os seguintes dados? </h1>
+                    </div>
+                <div class="conteudomodal d-flex flex-column justify-content-center mb-5">
+                    <div class="">
+                        <ul class="fw-bold subtitulo text-start">Informações gerais:
+                            <li>Nome</li>
+                            <li>Contato</li>
+                            <li>Fonte de recrutamento</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start mt-5">
+                        <ul class="fw-bold subtitulo text-start">Informações RH e P.F
+                            <li>Data último reajuste</li>
+                            <li>Salário atual</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-around">
+                    <div>
+                        <button type="button" class="btn submit" >CONFIRMAR</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn cancel" data-bs-dismiss="modal">CANCELAR</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>          
+    </body>
+</html>

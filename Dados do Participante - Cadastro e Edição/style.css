@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #EBEBEB !important;
+}
+
+.header{
+    background-color: #090B2E;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-header{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disabled{
+    display: none !important; 
+}
+
+.btn-header img, .logo img{
+    height: 50px;
+}
+
+.home.btn-header{
+    background-color: #FFB700;
+}
+
+.rollback.btn-header{
+    background-color: #AB0045;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.titulo{
+    color: #090B2E;
+}
+.subtitulo{
+    color: #737373;
+}
+
+#disabledTextInput{
+    background-color: #D3CACA;
+    border: 1px solid #BCB3B3;
+}
+
+.aprovado::placeholder{
+    color: #19B200 !important; 
+}
+
+textarea{
+    resize: none !important;
+}
+
+.download{
+    transform: rotate(180) !important;
+}
+
+.modal-body, .modal-header, .modal-footer {
+    text-align: center;
+    background-color: #EBEBEB
+}
+
+.modal-body{
+    min-height: 55vh;
+    flex-direction: column;
+}
+
+.submit, .cancel{
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    width: 350px;
+    height: 50px;
+    font-size: 25px !important;
+}
+
+.submit{
+    background-color: #AB0045 !important;
+
+}
+
+.cancel{
+    background-color: #FFB700 !important;
+}
+
+.conteudomodal {
+    display: flex;
+    justify-content: center;
+    min-height: 40vh;
+    font-size: 21px;
+}
+
+.btn.submit.form-control{
+    font-size: 22px !important;
+}
