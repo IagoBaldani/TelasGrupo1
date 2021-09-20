@@ -8,11 +8,16 @@
 
 body{
     background-color: #090B2E;
+
 }
 
 .container{
     display: flex;
+    flex-direction: row-reverse;
     width: 100%;
+    background-image: url("../assets/imgs/ICONE_SIS.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 100vh;
 }
 
@@ -33,7 +38,7 @@ body{
 .formulario{
     height: 80%;
     width: 90%;
-    background-color:rgba(235, 235, 235, 0.95);
+    background-color:rgba(235, 235, 235, 0.90);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -55,7 +60,8 @@ h3{
 
 .input{
     height: 40px;
-    width: 440px;
+    width: 90%;
+    max-width: 440px;
     padding: 15px;
     margin-bottom: 15px;
     font-size: 22px;
@@ -76,7 +82,8 @@ h3{
     font-size: 20px;
     border: none;
     transition: all linear 0.2s;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 40px;
     border-radius: 5px;
 }
@@ -84,4 +91,35 @@ h3{
 .submit:hover{
     background-color: #1D2276;
     cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-login{
+        width: 80%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 420px) {
+    .container{
+        background-position: center;
+    }
+
+    .form-login{
+        width: 95%;
+        height: 90%;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 15px;
+    }
 }

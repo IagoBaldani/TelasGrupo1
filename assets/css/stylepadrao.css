@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #EBEBEB !important;
+}
+
+.header{
+    background-color: #090B2E;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-header{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-header img, .logo img{
+    height: 50px;
+}
+
+.home.btn-header{
+    background-color: #FFB700;
+}
+
+.rollback.btn-header{
+    background-color: #AB0045;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
