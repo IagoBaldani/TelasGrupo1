@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dados do participante - Cadastro/Edição</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <link rel='stylesheet' type='text/css' href='../assets/css/stylepadrao.css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+        <link rel="shortcut icon"  href="../assets/imgs/LOGO_SIS_2.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src='main.js'></script>
+    </head>
+    <body>
+        <header>
+            <div class="header"> 
+                    <a href=""> <div class="home btn-header">
+                        <img src="../assets/imgs/home_white_24dp.svg">
+                    </div> </a> 
+
+                    <div class="logo"> 
+                        <img src="../assets/imgs/LOGO_SIS_2.png">
+                    </div>
+
+                    <a href=""> <div class="rollback btn-header"> 
+                        <img src="../assets/imgs/arrow_back_white_24dp.svg">
+                    </div> </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ínicio do formulário -->
+            <div class="container-fluid">
+                <div class="row mt-5 justify-content-evenly">
+                    <div class="div-titulo col-xl-4">
+                        <h3 class="fw-bold titulo">Dados do participante:</h3>
+                    </div>
+                    <div class="col-xl-4"></div>
+                    <div class="col-xl-2"></div>
+                </div>
+                <fieldset disabled>
+                <div class="row justify-content-evenly">
+                    <div class="col-xl-4">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputName">Nome</label>
+                                <input class="form-control" id="disabledTextInput" placeholder="Kaiqui Lopes" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputContato">Contato</label>
+                                <input class="form-control" id="disabledTextInput" placeholder="(xx) xxxxx-xxxx" type="tel">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputContato">CPF</label>
+                                <input class="form-control" id="disabledTextInput" placeholder="xxx.xxx.xxx-xx" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold mb-0 titulo" for="inputNotaLogica">Email corporativo</label>
+                                <input class="form-control" id="disabledTextInput" placeholder="kaiquilopes@sisconsultoria.com.br" type="email">
+                            </div>
+                    </div>
+                    <div class="col-xl-4">
+                        
+                    </div>
+                    <div class="col-xl-2">
+                        <form>
+                            <div class=" text-center text-md-left">
+                                <img src="../assets/imgs/perfil.svg" class="rounded-circle" alt="" width="150px">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+                <div class="row justify-content-evenly">
+                    <div class="col-xl-4 ">
+                        <button type="button" class="btn submit form-control" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            DESATIVAR INSTRUTOR
+                        </button>
+                        <!--<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">DESATIVAR PARTICIPANTE</button>-->
+                    </div>
+                    <div class="col-xl-4"></div>
+                    <div class="col-xl-2"></div>
+                </div>
+            </div>
+            <!-- fim do formulário -->
+        </main>
+
+        
+        <!-- modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-xl modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-between">
+                    <div>
+                        <h1 class="modal-title form-label fw-bold mb-0 titulo"> Deseja confirmar a desativação do seguinte participante? </h1>
+                    </div>
+                    <div class="conteudomodal">
+                        <h2 class="fw-bold subtitulo">Kaiqui Lopes</h2>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-around">
+                    <div>
+                        <button type="button" class="btn submit" >CONFIRMAR</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn cancel" data-bs-dismiss="modal">CANCELAR</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>          
+    </body>
+</html>
