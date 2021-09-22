@@ -1,0 +1,89 @@
+.tabela{
+    border: 1px solid #BCB3B3 !important;
+    background-color: white;
+}
+
+.titulo{
+    color: #090B2E;
+}
+
+.botao{
+    background-color: #AB0045 !important;
+    border-style: none !important;
+    width: 26.9em !important;
+    border-radius: 2px !important;
+}
+
+.campo{
+    border-radius: 2px !important;
+    background-color: white !important;
+    color: #737373 !important;
+}
+
+.th-id{
+    width: 2em !important;
+}
+
+.th-ms{
+    width: 15em !important;
+}
+
+.td-button{
+    width: 1.5em !important;
+    background-color: #FFB700 !important;
+}
+
+.nome-participante{
+    color: #737373;
+}
+.campo-tabela{
+    color: #737373 !important;
+}
+
+.submit{
+    background-color: #AB0045 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+}
+
+.cadastro{
+    background-color: #FFB700 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    max-width: 575px !important;
+
+}
+
+.ativo{
+    color: green;
+    font-weight: bold;
+}
+
+.inativo{
+    color: darkred;
+    font-weight: bold;
+}
+
+.imagem{
+  background-color:  #AB0045 !important;
+}
+
+.imagem-coluna{
+    background-color: #FFB700 !important;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 59vh;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+    height: 59vh;
+}
+
+
+
