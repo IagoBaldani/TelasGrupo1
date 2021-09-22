@@ -1,3 +1,7 @@
+a{
+    text-decoration: none !important;
+}
+
 .tabela{
     border: 1px solid #BCB3B3 !important;
     background-color: white;
@@ -40,20 +44,20 @@
     color: #737373 !important;
 }
 
-.submit{
-    background-color: #AB0045 !important;
+.submit, .cadastro{
     color: white !important;
     font-weight: bold !important;
     border-radius: 5px !important;
 }
 
+.submit{
+    background-color: #AB0045 !important;
+}
+
 .cadastro{
     background-color: #FFB700 !important;
-    color: white !important;
-    font-weight: bold !important;
-    border-radius: 5px !important;
     max-width: 432px !important;
-
+    
 }
 
 .ativo{

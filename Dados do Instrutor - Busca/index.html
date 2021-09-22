@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>Busca por participante</title>
+        <title>Busca por instrutor</title>
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'>
         <link rel='stylesheet' type='text/css' href='../assets/css/stylepadrao.css'>
         <link rel='stylesheet' type='text/css' href='style.css'>
@@ -15,52 +15,42 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
-    <header>
-        <div class="header">
-            <a href="../Home - Painel gerencial/index.html"> <div class="home btn-header">
-                <img src="../assets/imgs/home_white_24dp.svg">
-            </div> </a>
+        <header>
+            <div class="header">
+                <a href="../Home - Painel gerencial/index.html"> <div class="home btn-header">
+                    <img src="../assets/imgs/home_white_24dp.svg">
+                </div> </a>
 
-            <div class="logo">
-                <img src="../assets/imgs/LOGO_SIS_2.png">
+                <div class="logo">
+                    <img src="../assets/imgs/LOGO_SIS_2.png">
+                </div>
+
+                <a href="javascript:history.back()"> <div class="rollback btn-header">
+                        <img src="../assets/imgs/arrow_back_white_24dp.svg">
+                </div> </a>
             </div>
-
-            <a href="javascript:history.back()"> <div class="rollback btn-header">
-                    <img src="../assets/imgs/arrow_back_white_24dp.svg">
-            </div> </a>
-        </div>
-    </header>
+        </header>
         <main>
             <div class="container-fluid">
                 <div class="row justify-content-evenly mt-4 mb-3">
                     <div class="titulo col-xl-4">
-                        <h3 class="fw-bold">Busca por participante:</h3>
+                        <h3 class="fw-bold">Busca por instrutor:</h3>
                     </div>
                     <div class="col-xl-7 d-flex justify-content-center"> </div>
                 </div>
                 <div class="row justify-content-evenly">
                     <div class="col-xl-4">
-                        <form>
                             <div class="mb-3">
-                                <input name="nome" type="text" class="form-control mt-4" placeholder="Nome">
-                            </div>
-                           <div class="mb-3">
-                                <select class="form-select mt-4" >
-                                    <option disabled selected>Cargo</option>
-                                    <option value="1">Estagiário</option>
-                                    <option value="2">Jovem Aprendiz</option>
-                                    <option value="3">Trainee</option>
-                                </select>
+                                <input name="nome" type="text" class="form-control mt-4" id="exampleInputEmail1" placeholder="Nome">
                             </div>
                             <div class="mb-3">
                                 <select class="form-select mt-4" >
-                                    <option disabled selected>Programa de Formação</option>
+                                    <option selected disabled >Programa de Formação</option>
                                     <option value="1" >Java</option>
                                     <option value="2">Mainframe</option>
                                     <option value="3">.net</option>
                                 </select>
                             </div>
-                        </form>
                     </div>
                     <div class="col-xl-7">
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" >
@@ -71,83 +61,87 @@
                                     <td >Kaiqui Lopes</td>
                                     <td class="ativo">Ativo</td>
                                     <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Participante - Cadastro e Edição/index.html">
+                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
                                         </a> 
                                     </td> 
                                     <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Participante - Visualização/index.html">
+                                        <a href="../Dados do Instrutor - Visualização/index.html">
                                             <img src="../assets/imgs/account_circle_white_24dp.svg">
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>Luciana Neuber</td>
+                                    <th scope="row" width="50">2</th>
+                                    <td >Kaiqui Lopes</td>
                                     <td class="inativo">Inativo</td>
                                     <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Participante - Cadastro e Edição/index.html">
+                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
                                         </a> 
                                     </td> 
                                     <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Participante - Visualização/index.html">
+                                        <a href="../Dados do Instrutor - Visualização/index.html">
                                             <img src="../assets/imgs/account_circle_white_24dp.svg">
                                         </a>
                                     </td>
+                                </tr>
                                 <tr>
-                                    <th scope="row">3</th>
-                                    <td>Kaiqui Lopes</td>
+                                    <th scope="row" width="50">3</th>
+                                    <td >Kaiqui Lopes</td>
                                     <td class="ativo">Ativo</td>
                                     <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Participante - Cadastro e Edição/index.html">
+                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
                                         </a> 
                                     </td> 
                                     <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Participante - Visualização/index.html">
+                                        <a href="../Dados do Instrutor - Visualização/index.html">
                                             <img src="../assets/imgs/account_circle_white_24dp.svg">
                                         </a>
                                     </td>
+                                </tr>
                                 <tr>
-                                    <th scope="row">4</th>
-                                    <td>Luciana Neuber</td>
+                                    <th scope="row" width="50">4</th>
+                                    <td >Kaiqui Lopes</td>
                                     <td class="inativo">Inativo</td>
                                     <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Participante - Cadastro e Edição/index.html">
+                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
                                         </a> 
                                     </td> 
                                     <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Participante - Visualização/index.html">
+                                        <a href="../Dados do Instrutor - Visualização/index.html">
                                             <img src="../assets/imgs/account_circle_white_24dp.svg">
                                         </a>
                                     </td>
+                                </tr>
                                 <tr>
                                     <th scope="row" width="50">5</th>
                                     <td >Kaiqui Lopes</td>
                                     <td class="ativo">Ativo</td>
                                     <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Participante - Cadastro e Edição/index.html">
+                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
                                         </a> 
                                     </td> 
                                     <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Participante - Visualização/index.html">
+                                        <a href="../Dados do Instrutor - Visualização/index.html">
                                             <img src="../assets/imgs/account_circle_white_24dp.svg">
                                         </a>
                                     </td>
+                                </tr>
                                 <tr>
                                     <th scope="row" width="50">6</th>
                                     <td >Kaiqui Lopes</td>
-                                    <td class="ativo">Ativo</td>
+                                    <td class="inativo">Inativo</td>
                                     <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Participante - Cadastro e Edição/index.html">
+                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
                                         </a> 
                                     </td> 
                                     <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Participante - Visualização/index.html">
+                                        <a href="../Dados do Instrutor - Visualização/index.html">
                                             <img src="../assets/imgs/account_circle_white_24dp.svg">
                                         </a>
                                     </td>
@@ -162,7 +156,7 @@
                         <button class="mt-5 form-control submit">BUSCAR</button>
                     </div>
                     <div class="col-xl-7 justify-content-end d-flex">
-                        <a href="../Dados do Participante - Cadastro e Edição/index.html" class="mt-5 form-control cadastro d-flex justify-content-center"> NOVO CADASTRO </a>
+                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html" class="mt-5 form-control cadastro d-flex justify-content-center"> NOVO CADASTRO </a>
                     </div>
                 </div>
             </div>
