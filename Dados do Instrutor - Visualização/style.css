@@ -1,25 +1,8 @@
-/* Estilzações exclusivas da página */
-
 .titulo{
     color: #090B2E;
 }
-
-.submit,.label-arquivo{
-    background-color: #AB0045 !important;
-    color: white !important;
-    font-weight: bold !important;
-    border-radius: 5px !important;
-    cursor: pointer;
-}
-
-.input-arquivo {
-    display: none;
-}
-
-.label-arquivo{
-    height: 40px !important;
-    align-items: center !important;
-
+.subtitulo{
+    color: #737373;
 }
 
 #disabledTextInput{
@@ -27,4 +10,57 @@
     border: 1px solid #BCB3B3;
 }
 
+.aprovado::placeholder{
+    color: #19B200 !important; 
+}
 
+textarea{
+    resize: none !important;
+}
+
+.download{
+    transform: rotate(180) !important;
+}
+
+#disabledTextInput{
+    background-color: #D3CACA;
+    border: 1px solid #BCB3B3;
+}
+
+.modal-body, .modal-header, .modal-footer {
+    text-align: center;
+    background-color: #EBEBEB
+}
+
+.modal-body{
+    min-height: 55vh;
+    flex-direction: column;
+}
+
+.submit-modal, .cancel-modal{
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    width: 350px;
+    font-size: 25px !important;
+}
+
+
+.submit, .submit-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #AB0045 !important;
+}
+
+.cancel, .cancel-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #FFB700 !important;
+}
+
+.conteudomodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+}

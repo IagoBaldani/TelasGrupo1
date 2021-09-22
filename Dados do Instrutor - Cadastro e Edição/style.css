@@ -1,26 +1,63 @@
-
-/* Estilzações exclusivas da página */
-
 .titulo{
     color: #090B2E;
 }
 
-.submit,.label-arquivo{
-    background-color: #AB0045 !important;
+textarea{
+    resize: none !important;
+}
+
+.download{
+    transform: rotate(180) !important;
+}
+
+.modal-body, .modal-header, .modal-footer {
+    text-align: center;
+    background-color: #EBEBEB
+}
+
+.modal-body{
+    min-height: 55vh;
+    flex-direction: column;
+}
+
+.submit-modal, .cancel-modal{
     color: white !important;
     font-weight: bold !important;
     border-radius: 5px !important;
+    width: 350px;
+    font-size: 25px !important;
 }
 
-.input-arquivo {
+
+.submit, .submit-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #AB0045 !important;
+}
+
+.cancel, .cancel-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #FFB700 !important;
+}
+
+.conteudomodal {
+    display: flex;
+    justify-content: center;
+    min-height: 40vh;
+    font-size: 21px;
+}
+
+.input-arquivo{
     display: none;
 }
 
-.label-arquivo{
-    height: 40px !important;
-    align-items: center !important;
-
+.modal-content{
+    height: 80vh !important;
 }
 
-
-
+@media (max-width: 1200px) {
+    .editar{
+        margin-bottom: 3em;
+    }
+}

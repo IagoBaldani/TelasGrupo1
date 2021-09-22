@@ -10,10 +10,6 @@
     border: 1px solid #BCB3B3;
 }
 
-.aprovado::placeholder{
-    color: #19B200 !important; 
-}
-
 textarea{
     resize: none !important;
 }
@@ -32,21 +28,24 @@ textarea{
     flex-direction: column;
 }
 
-.submit, .cancel{
+.submit-modal, .cancel-modal{
     color: white !important;
     font-weight: bold !important;
     border-radius: 5px !important;
     width: 350px;
-    height: 50px;
     font-size: 25px !important;
 }
 
-.submit{
-    background-color: #AB0045 !important;
 
+.submit, .submit-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #AB0045 !important;
 }
 
-.cancel{
+.cancel, .cancel-modal{
+    color: white !important;
+    font-weight: bold !important;
     background-color: #FFB700 !important;
 }
 
@@ -57,6 +56,8 @@ textarea{
     min-height: 40vh;
 }
 
-.btn.submit.form-control{
-    font-size: 22px !important;
+@media (max-width: 1200px) {
+    .rounded-circle{
+        margin-bottom: 3em;
+    }
 }
