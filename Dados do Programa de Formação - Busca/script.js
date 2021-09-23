@@ -1,29 +1,29 @@
-var campoFiltro = document.querySelector("#filtrar-tabela");
+function buscar(){
+    let filtroNome = document.querySelector("#filtro-nome");
+    let filtroStatus = document.querySelector("#filtro-status");
+    
+    let valorFiltroNome = filtroNome.value;
+    var programas = document.querySelectorAll(".programa");
 
-campoFiltro.addEventListener("input",function(){
-    console.log(this.value);
-    var instrutores = document.querySelectorAll(".instrutor");
+    if(filtroNome.value.length > 0) {
+        for (var i = 0; i < programas.length; i++){
+            let programa = programas[i];
+            let nomeTxt = programa.querySelector("#info-nome").textContent;
 
-    if (this.value.length > 0) {
-        for (var i = 0; i < instrutores.length; i++){
-            var instrutor = instrutores[i];
-            var tdNome = instrutor.querySelector(".info-nome");
-            var nome = tdNome.textContent;
-            var expressao = new RegExp(this.value,"i");
-
-            if(!expressao.test(nome)){
-                instrutor.classList.add("invisivel");
+            let expressao = new RegExp(valorFiltroNome,"i");
+            if(!expressao.test(nomeTxt)){
+                programa.classList.add("invisivel");
             }else{
-                instrutor.classList.remove("invisivel");
+                programa.classList.remove("invisivel");
             }
         }
     }
     else{
-        for (var i = 0; i < instrutores.length; i++){
-             var instrutor = instrutores[i];
-             instrutor.classList.remove("invisivel");
+        for (var i = 0; i < programas.length; i++){
+            let programa = programas[i];
+             programa.classList.remove("invisivel");
         }
 
     }
 
-});
+}
