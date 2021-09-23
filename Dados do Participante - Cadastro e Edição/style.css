@@ -56,6 +56,10 @@
     font-size: 21px;
 }
 
+#envio-arquivo{
+    cursor: pointer;
+}
+
 @media (max-width: 1200px) {
     .editar{
         margin-bottom: 3em;
