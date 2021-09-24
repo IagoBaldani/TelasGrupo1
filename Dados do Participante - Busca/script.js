@@ -5,11 +5,13 @@ function filtraDados(){
     let nomeProcurado = document.querySelector("#filtro-nome").value;
     let programaProcurado = document.querySelector("#filtro-programa").value;
     let statusProcurado = document.querySelector("#filtro-status").value;
-    let linhas = document.querySelectorAll("#participante");
+    let linhasNl = document.querySelectorAll("#participante");
+    
+    var linhasArray = Array.prototype.slice.call(linhasNl);
 
     let arrayBoolLinhas = verifica(dadosLinhas, nomeProcurado, programaProcurado, statusProcurado);
     
-    mudaVisibilidade(arrayBoolLinhas, linhas);
+    mudaVisibilidade(arrayBoolLinhas, linhasArray);
 }
 
 function pegaDados(){
@@ -100,6 +102,9 @@ function verifica(dadosLinhas, nomeProcurado, programaProcurado, statusProcurado
 
 function mudaVisibilidade(arrayBoolLinhas, linhas){
     let i; 
+    var contador = 0;
+    let aviso = document.querySelector(".aviso");
+    var qtdLinhas = linhas.length;
 
     for(i = 0; i < linhas.length; i++){
         if(arrayBoolLinhas[i][0] && arrayBoolLinhas[i][1] && arrayBoolLinhas[i][2]){
@@ -107,7 +112,14 @@ function mudaVisibilidade(arrayBoolLinhas, linhas){
         }
         else{
             linhas[i].style.display = "none";
+            contador++;
         }
     }
 
+    if(qtdLinhas == contador){
+        aviso.style.display = "flex";
+    }
+    else{
+        aviso.style.display = "none";
+    }
 }
