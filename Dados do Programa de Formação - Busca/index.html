@@ -42,26 +42,26 @@
                     <div class="col-xl-4">
                         <form>
                             <div class="mb-3">
-                                <input name="nome" type="text" class="form-control mt-4" placeholder="Nome">
+                                <input name="nome" type="text" class="form-control mt-4" placeholder="Nome" id="filtro-nome">
                             </div>
                            <div class="mb-3">
-                                <select class="form-select mt-4" >
-                                    <option disabled selected>Status</option>
+                                <select class="form-select mt-4" id="filtro-status">
+                                    <option disabled selected value="0">Status</option>
                                     <option value="1">Em andamento</option>
-                                    <option value="2">Encerrada</option>
+                                    <option value="2">Encerrado</option>
                                 </select>
                             </div>
                         </form>
                     </div>
                     <div class="col-xl-7">
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" >
-                            <table class= "table table-bordered tabela mt-4 " >
+                        <table class= "table table-bordered tabela mt-4 " id="tab">
                                 <tbody align="center">
-                                <tr>
+                                <tr class="programa">
                                     <th scope="row" width="50">1</th>
-                                    <td>JAVA</td>
+                                    <td id="info-nome">JAVA</td>
                                     <td>Turma 1 2021</td>
-                                    <td class="encerrada">Encerrada</td>
+                                    <td id="info-status" class="encerrada info-status">Encerrado</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/settings_white_24dp.svg" /> 
@@ -73,11 +73,11 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="programa">
                                     <th scope="row">2</th>
-                                    <td>BI</td>
+                                    <td id="info-nome">BI</td>
                                     <td>Turma 1 2021</td>
-                                    <td class="emandamento">Em andamento</td>
+                                    <td id="info-status" class="em-andamento">Em andamento</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/settings_white_24dp.svg" /> 
@@ -88,11 +88,12 @@
                                             <img src="../assets/imgs/school_white_24dp.svg">
                                         </a>
                                     </td>
-                                <tr>
+                                </tr>    
+                                <tr class="programa">
                                     <th scope="row">3</th>
-                                    <td>Mainframe</td>
+                                    <td id="info-nome">Mainframe</td>
                                     <td>Turma 1 2021</td>
-                                    <td class="emandamento">Em andamento</td>
+                                    <td id="info-status" class="em-andamento">Em andamento</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/settings_white_24dp.svg" /> 
@@ -111,7 +112,7 @@
                 </div>
                 <div class="row justify-content-evenly">
                     <div class="col-xl-4">
-                        <button class="mt-5 form-control submit">BUSCAR</button>
+                        <button class="mt-5 form-control submit" onclick="filtraDados()">BUSCAR</button>
                     </div>
                     <div class="col-xl-7 justify-content-end d-flex">
                         <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html" class="mt-5 form-control cadastro d-flex justify-content-center"> NOVO CADASTRO </a>
@@ -119,5 +120,6 @@
                 </div>
             </div>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>
