@@ -41,24 +41,24 @@
                 <div class="row justify-content-evenly">
                     <div class="col-xl-4">
                             <div class="mb-3">
-                                <input name="nome" type="text" class="form-control mt-4" id="exampleInputEmail1" placeholder="Nome">
+                                <input name="filtro" type="text" class="form-control mt-4" id="filtro-nome" placeholder="Nome">
                             </div>
                             <div class="mb-3">
-                                <select class="form-select mt-4" >
-                                    <option disabled selected>Status</option>
-                                    <option value="1">Em andamento</option>
-                                    <option value="2">Encerrada</option>
+                                <select class="form-select mt-4" id="filtro-status" >
+                                    <option disabled selected value="0">Status</option>
+                                    <option value="1">Ativo</option>
+                                    <option value="2">Inativo</option>
                                 </select>
                             </div>
                     </div>
                     <div class="col-xl-7">
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" >
                             <table class= "table table-bordered tabela mt-4 " >
-                                <tbody align="center">
-                                <tr>
+                                <tbody align="center" id="tabela-instrutor">
+                                <tr class="instrutor">
                                     <th scope="row" width="50">1</th>
-                                    <td >Kaiqui Lopes</td>
-                                    <td class="ativo">Ativo</td>
+                                    <td id="info-nome" >Kaiqui Lopes</td>
+                                    <td id="info-status" class="ativo">Ativo</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -70,10 +70,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="instrutor">
                                     <th scope="row" width="50">2</th>
-                                    <td >Kaiqui Lopes</td>
-                                    <td class="inativo">Inativo</td>
+                                    <td id="info-nome" >Luciana Neuber</td>
+                                    <td id="info-status" class="inativo">Inativo</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -85,10 +85,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="instrutor">
                                     <th scope="row" width="50">3</th>
-                                    <td >Kaiqui Lopes</td>
-                                    <td class="ativo">Ativo</td>
+                                    <td id="info-nome" >Kaiqui Lopes</td>
+                                    <td id="info-status" class="ativo">Ativo</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -100,10 +100,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="instrutor">
                                     <th scope="row" width="50">4</th>
-                                    <td >Kaiqui Lopes</td>
-                                    <td class="inativo">Inativo</td>
+                                    <td id="info-nome">Luciana Neuber</td>
+                                    <td id="info-status" class="inativo">Inativo</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -115,10 +115,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="instrutor">
                                     <th scope="row" width="50">5</th>
-                                    <td >Kaiqui Lopes</td>
-                                    <td class="ativo">Ativo</td>
+                                    <td id="info-nome" >Kaiqui Lopes</td>
+                                    <td id="info-status" class="ativo">Ativo</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -130,10 +130,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="instrutor">
                                     <th scope="row" width="50">6</th>
-                                    <td >Kaiqui Lopes</td>
-                                    <td class="inativo">Inativo</td>
+                                    <td id="info-nome">Kaiqui Lopes</td>
+                                    <td id="info-status" class="inativo">Inativo</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -152,7 +152,7 @@
                 </div>
                 <div class="row justify-content-evenly">
                     <div class="col-xl-4">
-                        <button class="mt-5 form-control submit">BUSCAR</button>
+                        <button class="mt-5 form-control submit" onclick="filtraDados()">BUSCAR</button>
                     </div>
                     <div class="col-xl-7 justify-content-end d-flex">
                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html" class="mt-5 form-control cadastro d-flex justify-content-center"> NOVO CADASTRO </a>
@@ -160,5 +160,6 @@
                 </div>
             </div>
         </main>
+        <script src="js/filtra.js" ></script>
     </body>
 </html>

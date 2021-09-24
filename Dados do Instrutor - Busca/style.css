@@ -89,5 +89,9 @@ a{
     height: 59vh;
 }
 
+/* Filtrar tabela */
 
+.invisivel{
+    display: none;
+}
 
