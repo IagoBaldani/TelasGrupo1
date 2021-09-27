@@ -123,3 +123,14 @@ function mudaVisibilidade(arrayBoolLinhas, linhas){
         aviso.style.display = "none";
     }
 }
+
+function recarregaLista(){
+    let linhas = document.querySelectorAll("#participante");
+    let aviso = document.querySelector(".aviso");
+
+    linhas.forEach(linha =>{
+        linha.style.display = "";
+    });
+
+    aviso.style.display = "none";
+}
