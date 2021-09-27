@@ -44,7 +44,7 @@ a{
     color: #737373 !important;
 }
 
-.submit, .cadastro{
+.submit, .cadastro, .recarregar{
     color: white !important;
     font-weight: bold !important;
     border-radius: 5px !important;
@@ -91,5 +91,28 @@ a{
 .invisivel{
     display: none;
 }
+
+.aviso{ 
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+}
+
+.recarregar{
+    background-color: #090B2E !important;
+    max-width: 50%;
+    cursor: pointer !important;
+    transition: all linear 0.3s !important;
+}
+
+.recarregar:hover{
+    background-color: #141863 !important;
+}
+
 
 

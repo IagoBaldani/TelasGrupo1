@@ -4,10 +4,11 @@ function filtraDados(){
 
     let nomeProcurado = document.querySelector("#filtro-nome").value;
     let statusProcurado = document.querySelector("#filtro-status").value;
-    let linhas = document.querySelectorAll(".programa");
+    
+    let linhasNl = document.querySelectorAll(".programa");
+    var linhas = Array.prototype.slice.call(linhasNl);
 
     let arrayBoolLinhas = verifica(dadosLinhas, nomeProcurado, statusProcurado);
-
     mudaVisibilidade(arrayBoolLinhas, linhas);
 }
 
@@ -48,7 +49,6 @@ function verifica(dadosLinhas, nomeProcurado, statusProcurado){
     dadosLinhas.forEach(dadosLinha => {
         let boolLinha = [];
         
-        // Verificando se o nome procurado consta na tabela
         if(expressao.test(dadosLinha[0]) || nomeProcurado == ""){
             boolLinha.push(true);
         }
@@ -56,7 +56,6 @@ function verifica(dadosLinhas, nomeProcurado, statusProcurado){
             boolLinha.push(false);
         }
 
-        // Verificando se o status procurado consta na tabela
         if(statusProcurado == dadosLinha[1] || statusProcurado == 0){
             boolLinha.push(true);
         }
@@ -72,6 +71,9 @@ function verifica(dadosLinhas, nomeProcurado, statusProcurado){
 
 function mudaVisibilidade(arrayBoolLinhas, linhas){
     let i; 
+    var contador = 0;
+    let aviso = document.querySelector(".aviso");
+    var qtdLinhas = linhas.length;
 
     for(i = 0; i < linhas.length; i++){
         if(arrayBoolLinhas[i][0] && arrayBoolLinhas[i][1]){
@@ -79,7 +81,26 @@ function mudaVisibilidade(arrayBoolLinhas, linhas){
         }
         else{
             linhas[i].style.display = "none";
+            contador ++;
         }
     }
 
+    if(qtdLinhas == contador){
+        aviso.style.display = "flex";
+    }
+    else{
+        aviso.style.display = "none";
+    } 
+
+}
+
+function recarregaLista(){
+    let linhas = document.querySelectorAll(".programa");
+    let aviso = document.querySelector(".aviso");
+
+    linhas.forEach(linha =>{
+        linha.style.display = "";
+    });
+
+    aviso.style.display = "none";
 }
