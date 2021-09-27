@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-bind="https://vuejs.org/v2/api/#v-bind">
     <head>
         <meta charset='utf-8'>
         <title>Busca por formação</title>
@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="onLoad()">
     <header>
         <div class="header">
             <a href="../Home - Painel gerencial/index.html"> <div class="home btn-header">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-xl-7 d-flex justify-content-center"> </div>
                 </div>
-                <div class="row justify-content-evenly">
+                <div class="row justify-content-evenly" id="programas">
                     <div class="col-xl-4">
                         <form>
                             <div class="mb-3">
@@ -61,43 +61,11 @@
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" >
                             <table class= "table table-bordered tabela mt-4 " id="tab">
                                 <tbody align="center">
-                                <tr class="programa">
-                                    <th scope="row" width="50">1</th>
-                                    <td id="info-nome">JAVA</td>
-                                    <td>Turma 1 2021</td>
-                                    <td id="info-status" class="encerrada info-status">Encerrado</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/settings_white_24dp.svg" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Programa de Formação - Visualização/index.html">
-                                            <img src="../assets/imgs/school_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="programa">
-                                    <th scope="row">2</th>
-                                    <td id="info-nome">BI</td>
-                                    <td>Turma 1 2021</td>
-                                    <td id="info-status" class="em-andamento">Em andamento</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/settings_white_24dp.svg" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Programa de Formação - Visualização/index.html">
-                                            <img src="../assets/imgs/school_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>    
-                                <tr class="programa">
-                                    <th scope="row">3</th>
-                                    <td id="info-nome">Mainframe</td>
-                                    <td>Turma 1 2021</td>
-                                    <td id="info-status" class="em-andamento">Em andamento</td>
+                                <tr class="programa" v-for="programa in programas">
+                                    <th scope="row" width="50">{{programa.id}}</th>
+                                    <td id="info-nome"> {{programa.nome}}</td>
+                                    <td>{{programa.turma}}</td>
+                                    <td id="info-status" class="info-status" v-bind:class="(programa.status == 'Encerrado')?'encerrado':'em-andamento'">{{programa.status}}</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/settings_white_24dp.svg" /> 
@@ -124,6 +92,9 @@
                 </div>
             </div>
         </main>
-        <script src="script.js"></script>
     </body>
+    <script src="js/scriptget.js"></script>
+    <script src="js/scriptlista.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>
