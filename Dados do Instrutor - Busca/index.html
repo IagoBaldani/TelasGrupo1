@@ -52,10 +52,14 @@
                             </div>
                     </div>
                     <div class="col-xl-7">
+                            <div class="aviso">
+                                <h4 class="titulo fw-bold"> Não foi encontrado nenhum resultado com os parâmetros informados </h4>
+                                <button class="mt-3 form-control recarregar" onclick="recarregaLista()"> RECARREGAR LISTA</button> 
+                            </div>
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" >
                             <table class= "table table-bordered tabela mt-4 " >
                                 <tbody align="center" id="tabela-instrutor">
-                                <tr class="instrutor">
+                                <tr id="instrutor">
                                     <th scope="row" width="50">1</th>
                                     <td id="info-nome" >Kaiqui Lopes</td>
                                     <td id="info-status" class="ativo">Ativo</td>
@@ -70,7 +74,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="instrutor">
+                                <tr id="instrutor">
                                     <th scope="row" width="50">2</th>
                                     <td id="info-nome" >Luciana Neuber</td>
                                     <td id="info-status" class="inativo">Inativo</td>
@@ -85,7 +89,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="instrutor">
+                                <tr id="instrutor">
                                     <th scope="row" width="50">3</th>
                                     <td id="info-nome" >Kaiqui Lopes</td>
                                     <td id="info-status" class="ativo">Ativo</td>
@@ -100,7 +104,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="instrutor">
+                                <tr id="instrutor">
                                     <th scope="row" width="50">4</th>
                                     <td id="info-nome">Luciana Neuber</td>
                                     <td id="info-status" class="inativo">Inativo</td>
@@ -115,7 +119,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="instrutor">
+                                <tr id="instrutor">
                                     <th scope="row" width="50">5</th>
                                     <td id="info-nome" >Kaiqui Lopes</td>
                                     <td id="info-status" class="ativo">Ativo</td>
@@ -130,7 +134,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="instrutor">
+                                <tr id="instrutor">
                                     <th scope="row" width="50">6</th>
                                     <td id="info-nome">Kaiqui Lopes</td>
                                     <td id="info-status" class="inativo">Inativo</td>
