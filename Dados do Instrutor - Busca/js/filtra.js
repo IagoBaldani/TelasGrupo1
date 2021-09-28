@@ -98,6 +98,7 @@ function mudaVisibilidade(arrayBoolLinhas, linhas){
     }
 
 }
+
 function recarregaLista(){
     let linhas = document.querySelectorAll("#instrutor");
     let aviso = document.querySelector(".aviso");
@@ -108,3 +109,6 @@ function recarregaLista(){
 
     aviso.style.display = "none";
 }
+
+
+
