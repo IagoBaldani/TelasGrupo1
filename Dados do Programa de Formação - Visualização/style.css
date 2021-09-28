@@ -8,6 +8,10 @@
     color: #737373;
 }
 
+.form-control{
+    color: #737373 !important;
+}
+
 #disabledTextInput{
     background-color: #D3CACA;
     border: 1px solid #BCB3B3;
@@ -93,6 +97,7 @@ textarea{
 .conteudomodal {
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 40vh;
     font-size: 21px;
 }
