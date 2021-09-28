@@ -49,6 +49,7 @@ textarea{
 .conteudomodal {
     display: flex;
     justify-content: center;
+    align-items: right;
     min-height: 40vh;
     font-size: 21px;
 }
