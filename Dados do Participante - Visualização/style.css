@@ -10,8 +10,13 @@
     border: 1px solid #BCB3B3;
 }
 
+.form-control{
+    color: #737373 !important;
+}
+
 textarea{
     resize: none !important;
+    height:200px !important;
 }
 
 .download{
