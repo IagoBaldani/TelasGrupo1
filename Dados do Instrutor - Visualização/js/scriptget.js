@@ -8,8 +8,8 @@ function onLoad() {
                 "nome": "Kaiqui Lopes",
                 "contato": "(11)99999-9999",
                 "cpf": "222.222.222-22",
-                "email": "kaiquilopes@sisconsultoria.com.br"
-                
+                "email": "kaiquilopes@sisconsultoria.com.br",
+                "status": "Ativo"
             }
         }
     })

@@ -15,6 +15,7 @@ function onLoad() {
                 "urlTce": "google.com.br",
                 "terminoGraduacao": "20/12/2021",
                 "cargo": "Estagiário",
+                "status":"Ativo",
                 programaDeFormacao: {
                     "nome": "Java",
                     "turma": "Turma I 2021",

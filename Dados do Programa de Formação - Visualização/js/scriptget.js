@@ -8,7 +8,8 @@ function onLoad() {
                 "inicio": "20/07/2021",
                 "fim": "12/12/2021",
                 "coordenador": "Kaiqui Lopes",
-                "turma": "Turma I 2021"
+                "turma": "Turma I 2021",
+                "status": "Em andamento"
             }    
         }
     })

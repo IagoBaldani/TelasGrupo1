@@ -38,15 +38,18 @@
     </header>
 
     <main>
-        <div class="container-fluid" >
+        <div class="container-fluid"  id="programa">
             <div class="row mt-4 justify-content-evenly">
                 <div class="div-titulo col-xl-4">
                     <h3 class="fw-bold titulo">Dados da Formação:</h3>
                 </div>
-                <div class="col-xl-4"></div>
-                <div class="col-xl-2"></div>
+                <div class="col-xl-4">
+                    </div>
+                <div class="col-xl-2 d-flex justify-content-center">
+                    <h2 class="titulo secundario"> Status: <span v-bind:class="(programa.status == 'Em andamento')?'ativo':'inativo'"> {{programa.status}} </span></h2> 
+                </div>
             </div>
-            <div class="row d-flex justify-content-evenly" id="programa">
+            <div class="row d-flex justify-content-evenly">
                 <div class="col-xl-4">
                     <fieldset disabled>
                         <div class="mb-3">
