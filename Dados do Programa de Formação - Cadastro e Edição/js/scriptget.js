@@ -29,9 +29,7 @@ function onLoad() {
             }
         },
         methods:{
-            enviar(){
-                this.programa.nome = 
-            }
+         
         }
     })
 

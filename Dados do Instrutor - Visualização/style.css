@@ -1,6 +1,27 @@
 .titulo{
     color: #090B2E;
+    font-weight: bold;
 }
+
+.secundario{
+    font-size: 20px;
+}
+
+.ativo, .inativo{
+    margin-left: 1em;
+}
+
+.ativo{
+    color: green;
+}
+.inativo{
+    color: darkred;
+}
+
+.form-control{
+    color: #737373 !important;
+}
+
 .subtitulo{
     color: #737373;
 }
