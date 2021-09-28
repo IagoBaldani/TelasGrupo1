@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="onLoad()" >
         <header>
             <div class="header">
                 <a href="../Home - Painel gerencial/index.html"> <div class="home btn-header">
@@ -51,89 +51,18 @@
                                 </select>
                             </div>
                     </div>
-                    <div class="col-xl-7">
+                    <div class="col-xl-7" id="instrutores">
+                            <div class="aviso">
+                                <h4 class="titulo fw-bold"> Não foi encontrado nenhum resultado com os parâmetros informados </h4>
+                                <button class="mt-3 form-control recarregar" onclick="recarregaLista()"> RECARREGAR LISTA</button> 
+                            </div>
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" >
                             <table class= "table table-bordered tabela mt-4 " >
-                                <tbody align="center" id="tabela-instrutor">
-                                <tr class="instrutor">
-                                    <th scope="row" width="50">1</th>
-                                    <td id="info-nome" >Kaiqui Lopes</td>
-                                    <td id="info-status" class="ativo">Ativo</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Instrutor - Visualização/index.html">
-                                            <img src="../assets/imgs/account_circle_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="instrutor">
-                                    <th scope="row" width="50">2</th>
-                                    <td id="info-nome" >Luciana Neuber</td>
-                                    <td id="info-status" class="inativo">Inativo</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Instrutor - Visualização/index.html">
-                                            <img src="../assets/imgs/account_circle_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="instrutor">
-                                    <th scope="row" width="50">3</th>
-                                    <td id="info-nome" >Kaiqui Lopes</td>
-                                    <td id="info-status" class="ativo">Ativo</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Instrutor - Visualização/index.html">
-                                            <img src="../assets/imgs/account_circle_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="instrutor">
-                                    <th scope="row" width="50">4</th>
-                                    <td id="info-nome">Luciana Neuber</td>
-                                    <td id="info-status" class="inativo">Inativo</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Instrutor - Visualização/index.html">
-                                            <img src="../assets/imgs/account_circle_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="instrutor">
-                                    <th scope="row" width="50">5</th>
-                                    <td id="info-nome" >Kaiqui Lopes</td>
-                                    <td id="info-status" class="ativo">Ativo</td>
-                                    <td class="imagem rounded" width="50">
-                                        <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
-                                            <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
-                                        </a> 
-                                    </td> 
-                                    <td class="imagem-coluna rounded" width="50">
-                                        <a href="../Dados do Instrutor - Visualização/index.html">
-                                            <img src="../assets/imgs/account_circle_white_24dp.svg">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="instrutor">
-                                    <th scope="row" width="50">6</th>
-                                    <td id="info-nome">Kaiqui Lopes</td>
-                                    <td id="info-status" class="inativo">Inativo</td>
+                                <tbody align="center">
+                                <tr id="instrutor" v-for="instrutor in instrutores">
+                                    <th scope="row" width="50">{{instrutor.id}}</th>
+                                    <td id="info-nome" >{{instrutor.nome}}</td>
+                                    <td id="info-status" v-bind:class="(instrutor.status == 'Ativo')?'ativo':'inativo'">{{instrutor.status}}</td>
                                     <td class="imagem rounded" width="50">
                                         <a href="../Dados do Instrutor - Cadastro e Edição/index.html">
                                             <img src="../assets/imgs/manage_accounts_white_24dp.svg" alt="Imagem" /> 
@@ -161,5 +90,8 @@
             </div>
         </main>
         <script src="js/filtra.js" ></script>
+        <script src="js/scriptget.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>
