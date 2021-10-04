@@ -17,6 +17,8 @@ function onLoad() {
     })
 }
 
+
+
 function main(){
     dados = salvaDados();
     carregaDados(dados);
