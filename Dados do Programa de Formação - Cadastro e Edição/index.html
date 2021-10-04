@@ -45,29 +45,25 @@
                 <div class="col-xl-4"></div>
                 <div class="col-xl-2"></div>
             </div>
-            <form>
+            <form >
                 <div class="row d-flex justify-content-evenly">
                     <div class="col-xl-4">
                         <div class="mb-3">
                             <label for="nome" class="form-label fw-bold mb-0 titulo">Nome</label>
-                            <input type="text" class="form-control" id="nome-do-curso" required placeholder="Java">
+                            <input type="text" class="form-control" id="nome" required placeholder="Java">
                         </div>
                         <div class="mb-3">
-                            <label for="inicio-do-programa" class="form-label fw-bold mb-0 titulo">Início do
-                                Programa</label>
-                            <input type="date" class="form-control" id="inicio-do-programa" required
-                                placeholder="dd/MM/yyyy">
+                            <label for="inicio" class="form-label fw-bold mb-0 titulo">Início do Programa</label>
+                            <input type="date" class="form-control" id="inicio" required placeholder="dd/MM/yyyy">
                         </div>
                         <div class="mb-3">
-                            <label for="termino-do-programa" class="form-label fw-bold mb-0 titulo">Término do
-                                Programa</label>
-                            <input type="date" class="form-control" id="termino-do-programa" required
-                                placeholder="dd/MM/yyyy">
+                            <label for="termino" class="form-label fw-bold mb-0 titulo">Término do Programa</label>
+                            <input type="date" class="form-control" id="termino" required placeholder="dd/MM/yyyy">
                         </div>
                         <div class="mb-3 mt-3">
                             <label class="form-label fw-bold mb-0 titulo">Coordenador</label>
                             <select class="form-select" id="coordenadores">
-                                <option id="coordenador" v-for="coordenador in coordenadores" v-bind:value="coordenador.id"> {{coordenador.nome}} </option>
+                                <option id="coordenador" v-for="coordenador in coordenadores" v-bind:value="coordenador.nome"> {{coordenador.nome}} </option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -80,8 +76,7 @@
                 </div>
                 <div class="row d-flex justify-content-evenly">
                     <div class="col-xl-4">
-                        <input type="button" name="botao-ok" value="CONFIRMAR" class="mt-5 form-control submit"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <input type="button" name="botao-ok" value="CONFIRMAR" class="mt-5 form-control submit" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="main()">
                     </div>
                     <div class="col-xl-4"></div>
                     <div class="col-xl-2"></div>
@@ -99,17 +94,16 @@
                 </div>
                 <div class="modal-body d-flex justify-content-between">
                     <div>
-                        <h1 class="modal-title form-label fw-bold mb-0 titulo"> Deseja confirmar os seguintes dados?
-                        </h1>
+                        <h1 class="modal-title form-label fw-bold mb-0 titulo"> Deseja confirmar os seguintes dados? </h1>
                     </div>
-                    <div class="conteudomodal d-flex flex-column justify-content-center mb-0">
+                    <div class="conteudomodal d-flex flex-column justify-content-center mb-0" id="programa-modal">
                         <div class="mt-3">
                             <ul class="fw-bold subtitulo text-start">Informações gerais:
-                                <li> Nome</li>
-                                <li> Início do Programa</li>
-                                <li> Término do Programa</li>
-                                <li> Instrutor</li>
-                                <li> Turma</li>
+                                <li> Nome: {{programa.nome}}</li>
+                                <li> Início do Programa: {{programa.inicio}}</li>
+                                <li> Término do Programa: {{programa.termino}}</li>
+                                <li> Instrutor: {{programa.coordenador}}</li>
+                                <li> Turma: {{programa.turma}}</li>
                             </ul>
                         </div>
                         <div class="mt-3 modal-footer border-0 justify-content-around">
