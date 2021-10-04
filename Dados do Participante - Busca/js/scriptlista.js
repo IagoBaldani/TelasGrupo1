@@ -2,7 +2,7 @@
 function filtraDados(){
     const dadosLinhas = pegaDados();
 
-    let nomeProcurado = document.querySelector("#filtro-nome").value;
+/*     let nomeProcurado = document.querySelector("#filtro-nome").value;
     let programaProcurado = document.querySelector("#filtro-programa").value;
     let statusProcurado = document.querySelector("#filtro-status").value;
     let linhasNl = document.querySelectorAll("#participante");
@@ -11,24 +11,32 @@ function filtraDados(){
 
     let arrayBoolLinhas = verifica(dadosLinhas, nomeProcurado, programaProcurado, statusProcurado);
     
-    mudaVisibilidade(arrayBoolLinhas, linhasArray);
+    mudaVisibilidade(arrayBoolLinhas, linhasArray); */
 }
 
 function pegaDados(){
     let linhas = document.querySelectorAll("#participante");
+    let programas = document.querySelectorAll("#programa");
+
+    let arrayProgramas = [];
     let arrayDadosDasLinhas = [];
 
-    linhas.forEach( linha => {
+    programas.forEach(programa =>{
+        arrayProgramas.push(programa.textContent);
+    });
+
+    linhas.forEach(linha => {
         let dadosLinha = [];
         let nome = linha.querySelector("#info-nome").textContent;
         
-        let programa = trataPrograma(linha);
+        let programa = trataPrograma(linha, arrayProgramas);
         let status = trataStatus(linha);
 
         dadosLinha.push(nome, programa, status);
         arrayDadosDasLinhas.push(dadosLinha);
     });
 
+    console.log(arrayDadosDasLinhas);
     return arrayDadosDasLinhas;
 }
 
@@ -46,21 +54,17 @@ function trataStatus(linha){
     return status;
 }
 
-function trataPrograma(linha){
+function trataPrograma(linha, arrayProgramas){
     var programaTxt = linha.querySelector("#info-programa").textContent;
-    let programa = 0;
+    let programa = 0, i = 0;
 
-    if(programaTxt == "Java"){
-        return programa = 1;
-    }
-    else if(programaTxt == "Mainframe"){
-        return programa = 2;
-    }
-    else if(programaTxt == ".net"){
-        return programa = 3;
-    }
-  
-    return programa = 0;
+    arrayProgramas.forEach(programa =>{
+        if(programaTxt == programa){
+            return programa;
+        }
+    })
+
+    return programa;
 }
 
 function verifica(dadosLinhas, nomeProcurado, programaProcurado, statusProcurado){

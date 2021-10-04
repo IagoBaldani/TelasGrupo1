@@ -1,6 +1,6 @@
 function onLoad(){
 
-    var app = new Vue({
+    var vmParticipantes = new Vue({
         el: '#participantes',
         data: {
             participantes : [
@@ -36,5 +36,25 @@ function onLoad(){
                 },
             ]
         }
+    })
+
+    var vmProgramas = new Vue({
+        el: '#filtro-programa',
+        data:{
+            programas: [
+                {
+                    'id':1,
+                    'nome': 'Java'
+                },
+                {
+                    'id':2,
+                    'nome': 'Mainframe'
+                },
+                {
+                    'id':3,
+                    'nome': '.net'
+                }
+            ] 
+        }     
     })
 }
